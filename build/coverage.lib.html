@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-fbgraph/fbgraph/lib/graph.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-fbgraph/node_modules/fbgraph/lib/graph.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-fbgraph">npmtest-fbgraph (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-fbgraph/fbgraph/lib/graph.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-fbgraph/node_modules/fbgraph/lib/graph.js</span></h1>
     <h2>
         
         Statements: <span class="metric">16.97% <small>(28 / 165)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-fbgraph/fbgraph/lib/</a> » graph.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-fbgraph/node_modules/fbgraph/lib/</a> &#187; graph.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1324,22 +1326,22 @@ var request      = require('request')
   , qs           = require('qs')
   , url          = require('url')
   , crypto       = require('crypto')
-  , noop         = <span class="fstat-no" title="function not covered">function(){</span>};
+  , noop         = <span class="fstat-no" title="function not covered" >function(){</span>};
 &nbsp;
 &nbsp;
 // Using `extend` from https://github.com/Raynos/xtend
-<span class="fstat-no" title="function not covered">function extend(target) {</span>
-<span class="cstat-no" title="statement not covered">  for (var i = 1; i &lt; arguments.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">    var source = arguments[i]</span>
+<span class="fstat-no" title="function not covered" >function extend(target) {</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 1; i &lt; arguments.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var source = arguments[i]</span>
       , keys   = Object.keys(source);
 &nbsp;
-<span class="cstat-no" title="statement not covered">    for (var j = 0; j &lt; keys.length; j++) {</span>
-<span class="cstat-no" title="statement not covered">      var name = keys[j];</span>
-<span class="cstat-no" title="statement not covered">      target[name] = source[name];</span>
+<span class="cstat-no" title="statement not covered" >    for (var j = 0; j &lt; keys.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >      var name = keys[j];</span>
+<span class="cstat-no" title="statement not covered" >      target[name] = source[name];</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return target;</span>
+<span class="cstat-no" title="statement not covered" >  return target;</span>
 }
 &nbsp;
 &nbsp;
@@ -1372,27 +1374,27 @@ exports.version = '1.3.0';
  * @param {function/undefined} - callback function
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function Graph(method, url, postData, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof callback === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered">    callback  = postData;</span>
-<span class="cstat-no" title="statement not covered">    postData  = {};</span>
+<span class="fstat-no" title="function not covered" >function Graph(method, url, postData, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof callback === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >    callback  = postData;</span>
+<span class="cstat-no" title="statement not covered" >    postData  = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  url           = this.prepareUrl(url);</span>
-<span class="cstat-no" title="statement not covered">  this.callback = callback || noop;</span>
-<span class="cstat-no" title="statement not covered">  this.postData = postData;</span>
+<span class="cstat-no" title="statement not covered" >  url           = this.prepareUrl(url);</span>
+<span class="cstat-no" title="statement not covered" >  this.callback = callback || noop;</span>
+<span class="cstat-no" title="statement not covered" >  this.postData = postData;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  this.options          = extend({}, requestOptions);</span>
-<span class="cstat-no" title="statement not covered">  this.options.encoding = this.options.encoding || 'utf-8';</span>
+<span class="cstat-no" title="statement not covered" >  this.options          = extend({}, requestOptions);</span>
+<span class="cstat-no" title="statement not covered" >  this.options.encoding = this.options.encoding || 'utf-8';</span>
 &nbsp;
   // these particular set of options should be immutable
-<span class="cstat-no" title="statement not covered">  this.options.method         = method;</span>
-<span class="cstat-no" title="statement not covered">  this.options.uri            = url;</span>
-<span class="cstat-no" title="statement not covered">  this.options.followRedirect = false;</span>
+<span class="cstat-no" title="statement not covered" >  this.options.method         = method;</span>
+<span class="cstat-no" title="statement not covered" >  this.options.uri            = url;</span>
+<span class="cstat-no" title="statement not covered" >  this.options.followRedirect = false;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  this.request = this[method.toLowerCase()]();</span>
+<span class="cstat-no" title="statement not covered" >  this.request = this[method.toLowerCase()]();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 }
 &nbsp;
 &nbsp;
@@ -1401,14 +1403,14 @@ exports.version = '1.3.0';
  * - adds protocol and host prefix if none is given
  * @param {string} url string
  */
-Graph.prototype.prepareUrl = <span class="fstat-no" title="function not covered">function(url) {</span>
-<span class="cstat-no" title="statement not covered">  url = this.cleanUrl(url);</span>
+Graph.prototype.prepareUrl = <span class="fstat-no" title="function not covered" >function(url) {</span>
+<span class="cstat-no" title="statement not covered" >  url = this.cleanUrl(url);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (url.substr(0,4) !== 'http') {</span>
-<span class="cstat-no" title="statement not covered">    url = graphUrl + '/v' + graphVersion + url;</span>
+<span class="cstat-no" title="statement not covered" >  if (url.substr(0,4) !== 'http') {</span>
+<span class="cstat-no" title="statement not covered" >    url = graphUrl + '/v' + graphVersion + url;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return url;</span>
+<span class="cstat-no" title="statement not covered" >  return url;</span>
 };
 &nbsp;
 /**
@@ -1419,33 +1421,33 @@ Graph.prototype.prepareUrl = <span class="fstat-no" title="function not covered"
  * @param {string} url string
  */
 &nbsp;
-Graph.prototype.cleanUrl = <span class="fstat-no" title="function not covered">function(url) {</span>
-<span class="cstat-no" title="statement not covered">  url = url.trim();</span>
+Graph.prototype.cleanUrl = <span class="fstat-no" title="function not covered" >function(url) {</span>
+<span class="cstat-no" title="statement not covered" >  url = url.trim();</span>
 &nbsp;
   // prep access token in url for appsecret proofing
-<span class="cstat-no" title="statement not covered">  var regex = /access_token=([^&amp;]*)/;</span>
-<span class="cstat-no" title="statement not covered">  var results = regex.exec(url);</span>
-<span class="cstat-no" title="statement not covered">  var sessionAccessToken = results ? results[1] : accessToken;</span>
+<span class="cstat-no" title="statement not covered" >  var regex = /access_token=([^&amp;]*)/;</span>
+<span class="cstat-no" title="statement not covered" >  var results = regex.exec(url);</span>
+<span class="cstat-no" title="statement not covered" >  var sessionAccessToken = results ? results[1] : accessToken;</span>
 &nbsp;
   // add leading slash
-<span class="cstat-no" title="statement not covered">  if (url.charAt(0) !== '/' &amp;&amp; url.substr(0,4) !== 'http') <span class="cstat-no" title="statement not covered">url = '/' + url;</span></span>
+<span class="cstat-no" title="statement not covered" >  if (url.charAt(0) !== '/' &amp;&amp; url.substr(0,4) !== 'http') <span class="cstat-no" title="statement not covered" >url = '/' + url;</span></span>
 &nbsp;
   // add access token to url
-<span class="cstat-no" title="statement not covered">  if (accessToken &amp;&amp; url.indexOf('access_token=') === -1) {</span>
-<span class="cstat-no" title="statement not covered">    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
-<span class="cstat-no" title="statement not covered">    url += "access_token=" + accessToken;</span>
+<span class="cstat-no" title="statement not covered" >  if (accessToken &amp;&amp; url.indexOf('access_token=') === -1) {</span>
+<span class="cstat-no" title="statement not covered" >    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
+<span class="cstat-no" title="statement not covered" >    url += "access_token=" + accessToken;</span>
   }
 &nbsp;
   // add appsecret_proof to the url
-<span class="cstat-no" title="statement not covered">  if (sessionAccessToken &amp;&amp; appSecret &amp;&amp; url.indexOf('appsecret_proof') === -1) {</span>
-<span class="cstat-no" title="statement not covered">    var hmac = crypto.createHmac('sha256', appSecret);</span>
-<span class="cstat-no" title="statement not covered">    hmac.update(sessionAccessToken);</span>
+<span class="cstat-no" title="statement not covered" >  if (sessionAccessToken &amp;&amp; appSecret &amp;&amp; url.indexOf('appsecret_proof') === -1) {</span>
+<span class="cstat-no" title="statement not covered" >    var hmac = crypto.createHmac('sha256', appSecret);</span>
+<span class="cstat-no" title="statement not covered" >    hmac.update(sessionAccessToken);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
-<span class="cstat-no" title="statement not covered">    url += "appsecret_proof=" + hmac.digest('hex');</span>
+<span class="cstat-no" title="statement not covered" >    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
+<span class="cstat-no" title="statement not covered" >    url += "appsecret_proof=" + hmac.digest('hex');</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return url;</span>
+<span class="cstat-no" title="statement not covered" >  return url;</span>
 };
 &nbsp;
 /**
@@ -1453,39 +1455,39 @@ Graph.prototype.cleanUrl = <span class="fstat-no" title="function not covered">f
  * @param {String|Object} body
  */
 &nbsp;
-Graph.prototype.end = <span class="fstat-no" title="function not covered">function (body) {</span>
-<span class="cstat-no" title="statement not covered">  var json = typeof body === 'string' ? null : body</span>
+Graph.prototype.end = <span class="fstat-no" title="function not covered" >function (body) {</span>
+<span class="cstat-no" title="statement not covered" >  var json = typeof body === 'string' ? null : body</span>
     , err  = null;
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!json) {</span>
-<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered" >  if (!json) {</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
 &nbsp;
       // this accounts for `real` json strings
-<span class="cstat-no" title="statement not covered">      if (~body.indexOf('{') &amp;&amp; ~body.indexOf('}')) {</span>
-<span class="cstat-no" title="statement not covered">        json = JSON.parse(body);</span>
+<span class="cstat-no" title="statement not covered" >      if (~body.indexOf('{') &amp;&amp; ~body.indexOf('}')) {</span>
+<span class="cstat-no" title="statement not covered" >        json = JSON.parse(body);</span>
 &nbsp;
       } else {
         // this accounts for responses that are plain strings
         // access token responses have format of "accessToken=....&amp;..."
         // but facebook has random responses that just return "true"
         // so we'll convert those to { data: true }
-<span class="cstat-no" title="statement not covered">        if (!~body.indexOf('='))    <span class="cstat-no" title="statement not covered">body = 'data=' + body;</span></span>
-<span class="cstat-no" title="statement not covered">        if (body.charAt(0) !== '?') <span class="cstat-no" title="statement not covered">body = '?' + body;</span></span>
+<span class="cstat-no" title="statement not covered" >        if (!~body.indexOf('='))    <span class="cstat-no" title="statement not covered" >body = 'data=' + body;</span></span>
+<span class="cstat-no" title="statement not covered" >        if (body.charAt(0) !== '?') <span class="cstat-no" title="statement not covered" >body = '?' + body;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        json = url.parse(body, true).query;</span>
+<span class="cstat-no" title="statement not covered" >        json = url.parse(body, true).query;</span>
       }
 &nbsp;
     } catch (e) {
-<span class="cstat-no" title="statement not covered">      err = {</span>
+<span class="cstat-no" title="statement not covered" >      err = {</span>
           message: 'Error parsing json'
         , exception: e
       };
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!err &amp;&amp; (json &amp;&amp; json.error)) <span class="cstat-no" title="statement not covered">err = json.error;</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!err &amp;&amp; (json &amp;&amp; json.error)) <span class="cstat-no" title="statement not covered" >err = json.error;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  this.callback(err, json);</span>
+<span class="cstat-no" title="statement not covered" >  this.callback(err, json);</span>
 };
 &nbsp;
 &nbsp;
@@ -1493,27 +1495,27 @@ Graph.prototype.end = <span class="fstat-no" title="function not covered">functi
  * https.get request wrapper
  */
 &nbsp;
-Graph.prototype.get = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  var self = this;</span>
+Graph.prototype.get = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return request.get(this.options, <span class="fstat-no" title="function not covered">function(err, res, body) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (err) {</span>
-<span class="cstat-no" title="statement not covered">      self.callback({</span>
+<span class="cstat-no" title="statement not covered" >  return request.get(this.options, <span class="fstat-no" title="function not covered" >function(err, res, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      self.callback({</span>
           message: 'Error processing https request'
         , exception: err
       }, null);
 &nbsp;
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (~res.headers['content-type'].indexOf('image')) {</span>
-<span class="cstat-no" title="statement not covered">      body = {</span>
+<span class="cstat-no" title="statement not covered" >    if (~res.headers['content-type'].indexOf('image')) {</span>
+<span class="cstat-no" title="statement not covered" >      body = {</span>
           image: true
         , location: res.headers.location
       };
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.end(body);</span>
+<span class="cstat-no" title="statement not covered" >    self.end(body);</span>
   });
 };
 &nbsp;
@@ -1522,24 +1524,24 @@ Graph.prototype.get = <span class="fstat-no" title="function not covered">functi
  * https.post request wrapper
  */
 &nbsp;
-Graph.prototype.post = <span class="fstat-no" title="function not covered">function() {</span>
+Graph.prototype.post = <span class="fstat-no" title="function not covered" >function() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var self     = this</span>
+<span class="cstat-no" title="statement not covered" >  var self     = this</span>
     , postData = qs.stringify(this.postData);
 &nbsp;
-<span class="cstat-no" title="statement not covered">  this.options.body  = postData;</span>
+<span class="cstat-no" title="statement not covered" >  this.options.body  = postData;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return request(this.options, <span class="fstat-no" title="function not covered">function (err, res, body) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (err) {</span>
-<span class="cstat-no" title="statement not covered">      self.callback({</span>
+<span class="cstat-no" title="statement not covered" >  return request(this.options, <span class="fstat-no" title="function not covered" >function (err, res, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      self.callback({</span>
           message: 'Error processing https request'
         , exception: err
       }, null);
 &nbsp;
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.end(body);</span>
+<span class="cstat-no" title="statement not covered" >    self.end(body);</span>
   });
 &nbsp;
 };
@@ -1579,22 +1581,22 @@ Graph.prototype.post = <span class="fstat-no" title="function not covered">funct
  * @param {function} callback
  */
 &nbsp;
-exports.get = <span class="fstat-no" title="function not covered">function(url, params, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof params === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    callback = params;</span>
-<span class="cstat-no" title="statement not covered">    params   = null;</span>
+exports.get = <span class="fstat-no" title="function not covered" >function(url, params, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof params === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    callback = params;</span>
+<span class="cstat-no" title="statement not covered" >    params   = null;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof url !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    return callback({ message: 'Graph api url must be a string' }, null);</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof url !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    return callback({ message: 'Graph api url must be a string' }, null);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (params)  {</span>
-<span class="cstat-no" title="statement not covered">    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
-<span class="cstat-no" title="statement not covered">    url += qs.stringify(params);</span>
+<span class="cstat-no" title="statement not covered" >  if (params)  {</span>
+<span class="cstat-no" title="statement not covered" >    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
+<span class="cstat-no" title="statement not covered" >    url += qs.stringify(params);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return new Graph('GET', url, callback);</span>
+<span class="cstat-no" title="statement not covered" >  return new Graph('GET', url, callback);</span>
 };
 &nbsp;
 /**
@@ -1610,17 +1612,17 @@ exports.get = <span class="fstat-no" title="function not covered">function(url, 
  * @param {function} callback
  */
 &nbsp;
-exports.post = <span class="fstat-no" title="function not covered">function (url, postData, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof url !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    return callback({ message: 'Graph api url must be a string' }, null);</span>
+exports.post = <span class="fstat-no" title="function not covered" >function (url, postData, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof url !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    return callback({ message: 'Graph api url must be a string' }, null);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof postData === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    callback = postData;</span>
-<span class="cstat-no" title="statement not covered">    postData = url.indexOf('access_token') !== -1 ? {} : {access_token: accessToken};</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof postData === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    callback = postData;</span>
+<span class="cstat-no" title="statement not covered" >    postData = url.indexOf('access_token') !== -1 ? {} : {access_token: accessToken};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return new Graph('POST', url, postData, callback);</span>
+<span class="cstat-no" title="statement not covered" >  return new Graph('POST', url, postData, callback);</span>
 };
 &nbsp;
 /**
@@ -1633,18 +1635,18 @@ exports.post = <span class="fstat-no" title="function not covered">function (url
  * @param {function} callback
  */
 &nbsp;
-exports.del = <span class="fstat-no" title="function not covered">function (url, postData, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (!url.match(/[?|&amp;]method=delete/i)) {</span>
-<span class="cstat-no" title="statement not covered">    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
-<span class="cstat-no" title="statement not covered">    url += 'method=delete';</span>
+exports.del = <span class="fstat-no" title="function not covered" >function (url, postData, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!url.match(/[?|&amp;]method=delete/i)) {</span>
+<span class="cstat-no" title="statement not covered" >    url += ~url.indexOf('?') ? '&amp;' : '?';</span>
+<span class="cstat-no" title="statement not covered" >    url += 'method=delete';</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof postData === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    callback = postData;</span>
-<span class="cstat-no" title="statement not covered">    postData = url.indexOf('access_token') !== -1 ? {} : {access_token: accessToken};</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof postData === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    callback = postData;</span>
+<span class="cstat-no" title="statement not covered" >    postData = url.indexOf('access_token') !== -1 ? {} : {access_token: accessToken};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this.post(url, postData, callback);</span>
+<span class="cstat-no" title="statement not covered" >  return this.post(url, postData, callback);</span>
 };
 &nbsp;
 &nbsp;
@@ -1655,10 +1657,10 @@ exports.del = <span class="fstat-no" title="function not covered">function (url,
  * @param {function} callback
  */
 &nbsp;
-exports.search = <span class="fstat-no" title="function not covered">function (options, callback) {</span>
-<span class="cstat-no" title="statement not covered">  options = options || {};</span>
-<span class="cstat-no" title="statement not covered">  var url = '/search?' + qs.stringify(options);</span>
-<span class="cstat-no" title="statement not covered">  return this.get(url, callback);</span>
+exports.search = <span class="fstat-no" title="function not covered" >function (options, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >  var url = '/search?' + qs.stringify(options);</span>
+<span class="cstat-no" title="statement not covered" >  return this.get(url, callback);</span>
 };
 &nbsp;
 /**
@@ -1671,17 +1673,17 @@ exports.search = <span class="fstat-no" title="function not covered">function (o
  * @see https://developers.facebook.com/docs/graph-api/making-multiple-requests
  */
 &nbsp;
-exports.batch = <span class="fstat-no" title="function not covered">function (reqs, additionalData, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (!(reqs instanceof Array)) {</span>
-<span class="cstat-no" title="statement not covered">    return callback({ message: 'Graph api batch requests must be an array' }, null);</span>
+exports.batch = <span class="fstat-no" title="function not covered" >function (reqs, additionalData, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!(reqs instanceof Array)) {</span>
+<span class="cstat-no" title="statement not covered" >    return callback({ message: 'Graph api batch requests must be an array' }, null);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof additionalData === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    callback = additionalData;</span>
-<span class="cstat-no" title="statement not covered">    additionalData = {};</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof additionalData === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    callback = additionalData;</span>
+<span class="cstat-no" title="statement not covered" >    additionalData = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return new Graph('POST', '', extend({}, {</span>
+<span class="cstat-no" title="statement not covered" >  return new Graph('POST', '', extend({}, {</span>
     access_token: accessToken,
     batch: JSON.stringify(reqs)
   }, additionalData), callback);
@@ -1702,17 +1704,17 @@ exports.batch = <span class="fstat-no" title="function not covered">function (re
  * @param {object} params
  * @param {function} callback
  */
-exports.fql = <span class="fstat-no" title="function not covered">function (query, params, callback) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof query !== 'string') <span class="cstat-no" title="statement not covered">query = JSON.stringify(query);</span></span>
+exports.fql = <span class="fstat-no" title="function not covered" >function (query, params, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof query !== 'string') <span class="cstat-no" title="statement not covered" >query = JSON.stringify(query);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var url = '/fql?q=' + encodeURIComponent(query);</span>
+<span class="cstat-no" title="statement not covered" >  var url = '/fql?q=' + encodeURIComponent(query);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof params === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    callback = params;</span>
-<span class="cstat-no" title="statement not covered">    params = null;</span>
-<span class="cstat-no" title="statement not covered">    return this.get(url, callback);</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof params === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    callback = params;</span>
+<span class="cstat-no" title="statement not covered" >    params = null;</span>
+<span class="cstat-no" title="statement not covered" >    return this.get(url, callback);</span>
   } else {
-<span class="cstat-no" title="statement not covered">    return this.get(url, params, callback);</span>
+<span class="cstat-no" title="statement not covered" >    return this.get(url, params, callback);</span>
   }
 };
 &nbsp;
@@ -1724,9 +1726,9 @@ exports.fql = <span class="fstat-no" title="function not covered">function (quer
  * @param {object} opts  Options hash. { mobile: true } will return mobile oAuth URL
  * @returns the oAuthDialogUrl based on params
  */
-exports.getOauthUrl = <span class="fstat-no" title="function not covered">function (params, opts) {</span>
-<span class="cstat-no" title="statement not covered">  var url = (opts &amp;&amp; opts.mobile) ? oauthDialogUrlMobile : oauthDialogUrl;</span>
-<span class="cstat-no" title="statement not covered">  return url + qs.stringify(params);</span>
+exports.getOauthUrl = <span class="fstat-no" title="function not covered" >function (params, opts) {</span>
+<span class="cstat-no" title="statement not covered" >  var url = (opts &amp;&amp; opts.mobile) ? oauthDialogUrlMobile : oauthDialogUrl;</span>
+<span class="cstat-no" title="statement not covered" >  return url + qs.stringify(params);</span>
 };
 &nbsp;
 /**
@@ -1741,13 +1743,13 @@ exports.getOauthUrl = <span class="fstat-no" title="function not covered">functi
  * @param {function} callback
  */
 &nbsp;
-exports.authorize = <span class="fstat-no" title="function not covered">function (params, callback) {</span>
-<span class="cstat-no" title="statement not covered">  var self = this;</span>
+exports.authorize = <span class="fstat-no" title="function not covered" >function (params, callback) {</span>
+<span class="cstat-no" title="statement not covered" >  var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this.get("/oauth/access_token", params, <span class="fstat-no" title="function not covered">function(err, res) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (!err) <span class="cstat-no" title="statement not covered">self.setAccessToken(res.access_token);</span></span>
+<span class="cstat-no" title="statement not covered" >  return this.get("/oauth/access_token", params, <span class="fstat-no" title="function not covered" >function(err, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!err) <span class="cstat-no" title="statement not covered" >self.setAccessToken(res.access_token);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    callback(err, res);</span>
+<span class="cstat-no" title="statement not covered" >    callback(err, res);</span>
   });
 };
 &nbsp;
@@ -1761,18 +1763,18 @@ exports.authorize = <span class="fstat-no" title="function not covered">function
  * @param {function} callback
  */
 &nbsp;
-exports.extendAccessToken = <span class="fstat-no" title="function not covered">function (params, callback) {</span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
+exports.extendAccessToken = <span class="fstat-no" title="function not covered" >function (params, callback) {</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    params.grant_type        = 'fb_exchange_token';</span>
-<span class="cstat-no" title="statement not covered">    params.fb_exchange_token = params.access_token ? params.access_token : this.getAccessToken();</span>
+<span class="cstat-no" title="statement not covered" >    params.grant_type        = 'fb_exchange_token';</span>
+<span class="cstat-no" title="statement not covered" >    params.fb_exchange_token = params.access_token ? params.access_token : this.getAccessToken();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return this.get("/oauth/access_token", params, <span class="fstat-no" title="function not covered">function(err, res) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (!err &amp;&amp; !params.access_token) {</span>
-<span class="cstat-no" title="statement not covered">        self.setAccessToken(res.access_token);</span>
+<span class="cstat-no" title="statement not covered" >    return this.get("/oauth/access_token", params, <span class="fstat-no" title="function not covered" >function(err, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (!err &amp;&amp; !params.access_token) {</span>
+<span class="cstat-no" title="statement not covered" >        self.setAccessToken(res.access_token);</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      callback(err, res);</span>
+<span class="cstat-no" title="statement not covered" >      callback(err, res);</span>
     });
 };
 &nbsp;
@@ -1783,18 +1785,18 @@ exports.extendAccessToken = <span class="fstat-no" title="function not covered">
  * @param {Object} options
  */
 &nbsp;
-exports.setOptions = <span class="fstat-no" title="function not covered">function (options) {</span>
-<span class="cstat-no" title="statement not covered">  if (typeof options === 'object')  <span class="cstat-no" title="statement not covered">requestOptions = options;</span></span>
+exports.setOptions = <span class="fstat-no" title="function not covered" >function (options) {</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof options === 'object')  <span class="cstat-no" title="statement not covered" >requestOptions = options;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 /**
  * @returns the request options object
  */
 &nbsp;
-exports.getOptions = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">  return requestOptions;</span>
+exports.getOptions = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >  return requestOptions;</span>
 };
 &nbsp;
 /**
@@ -1802,17 +1804,17 @@ exports.getOptions = <span class="fstat-no" title="function not covered">functio
  * @param {string} token
  */
 &nbsp;
-exports.setAccessToken = <span class="fstat-no" title="function not covered">function(token) {</span>
-<span class="cstat-no" title="statement not covered">  accessToken = token;</span>
-<span class="cstat-no" title="statement not covered">  return this;</span>
+exports.setAccessToken = <span class="fstat-no" title="function not covered" >function(token) {</span>
+<span class="cstat-no" title="statement not covered" >  accessToken = token;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 /**
  * @returns the access token
  */
 &nbsp;
-exports.getAccessToken = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return accessToken;</span>
+exports.getAccessToken = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return accessToken;</span>
 };
 &nbsp;
 /**
@@ -1821,15 +1823,15 @@ exports.getAccessToken = <span class="fstat-no" title="function not covered">fun
  * add '2.1', '1.1' etc
  * @param {string} version
  */
-exports.setVersion = <span class="fstat-no" title="function not covered">function (version) {</span>
+exports.setVersion = <span class="fstat-no" title="function not covered" >function (version) {</span>
   // set version
-<span class="cstat-no" title="statement not covered">  graphVersion = version;</span>
+<span class="cstat-no" title="statement not covered" >  graphVersion = version;</span>
 &nbsp;
   // update auth urls
-<span class="cstat-no" title="statement not covered">  oauthDialogUrl       = "http://www.facebook.com/v"+version+"/dialog/oauth?"; </span>// oldest version for auth
-<span class="cstat-no" title="statement not covered">  oauthDialogUrlMobile = "http://m.facebook.com/v"+version+"/dialog/oauth?"; </span>  // oldest version for auth
+<span class="cstat-no" title="statement not covered" >  oauthDialogUrl       = "http://www.facebook.com/v"+version+"/dialog/oauth?"; </span>// oldest version for auth
+<span class="cstat-no" title="statement not covered" >  oauthDialogUrlMobile = "http://m.facebook.com/v"+version+"/dialog/oauth?"; </span>  // oldest version for auth
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 &nbsp;
@@ -1838,42 +1840,41 @@ exports.setVersion = <span class="fstat-no" title="function not covered">functio
  * @param {string} token
  */
 &nbsp;
-exports.setAppSecret = <span class="fstat-no" title="function not covered">function(token) {</span>
-<span class="cstat-no" title="statement not covered">  appSecret = token;</span>
-<span class="cstat-no" title="statement not covered">  return this;</span>
+exports.setAppSecret = <span class="fstat-no" title="function not covered" >function(token) {</span>
+<span class="cstat-no" title="statement not covered" >  appSecret = token;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 /**
  * @returns the app secret
  */
 &nbsp;
-exports.getAppSecret = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return appSecret;</span>
+exports.getAppSecret = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return appSecret;</span>
 };
 &nbsp;
 /**
  * sets graph url
  */
 &nbsp;
-exports.setGraphUrl = <span class="fstat-no" title="function not covered">function (url) {</span>
-<span class="cstat-no" title="statement not covered">  graphUrl = url;</span>
-<span class="cstat-no" title="statement not covered">  return this;</span>
+exports.setGraphUrl = <span class="fstat-no" title="function not covered" >function (url) {</span>
+<span class="cstat-no" title="statement not covered" >  graphUrl = url;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 /**
  * @returns the graphUrl
  */
 &nbsp;
-exports.getGraphUrl = <span class="fstat-no" title="function not covered">function() {</span>
-<span class="cstat-no" title="statement not covered">  return graphUrl;</span>
+exports.getGraphUrl = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >  return graphUrl;</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 22:21:22 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 18:07:24 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
