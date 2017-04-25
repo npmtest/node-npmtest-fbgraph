@@ -1,6 +1,6 @@
 # npmtest-fbgraph
 
-#### test coverage for  [fbgraph (v1.4.1)](https://github.com/criso/fbgraph#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-fbgraph.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-fbgraph) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-fbgraph.svg)](https://travis-ci.org/npmtest/node-npmtest-fbgraph)
+#### basic test coverage for  [fbgraph (v1.4.1)](https://github.com/criso/fbgraph#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-fbgraph.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-fbgraph) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-fbgraph.svg)](https://travis-ci.org/npmtest/node-npmtest-fbgraph)
 
 #### Facebook Graph API client
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-fbgraph/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-fbgraph/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-fbgraph/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-fbgraph/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-fbgraph/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-fbgraph/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-fbgraph/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-fbgraph/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-fbgraph/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-fbgraph/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-fbgraph/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-fbgraph/build/coverage.html/index.html)
 
@@ -78,7 +78,8 @@
         "url": "git://github.com/criso/fbgraph.git"
     },
     "scripts": {},
-    "version": "1.4.1"
+    "version": "1.4.1",
+    "bin": {}
 }
 ```
 
